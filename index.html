@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: white;
+        margin: 10px 20px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease;
+      }
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+      input[type="number"]:focus {
+        border-color: #4caf50;
+        outline: none;
+      }
+      .error {
+        border-color: red !important;
+      }
+      button {
+        padding: 12px 25px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.1);
+      }
+      .result {
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Age Calculator</h2>
+      <input type="number" id="day" placeholder="Enter Day (1-31)" />
+      <input type="number" id="month" placeholder="Enter Month (1-12)" />
+      <input type="number" id="year" placeholder="Enter Year" />
+      <button onclick="validateAndCalculateAge()">Calculate Age</button>
+      <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
